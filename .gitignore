@@ -1,0 +1,17 @@
+.sass-cache/
+.settings/
+.externalToolBuilders/
+.project
+.buildpath
+.metadata
+*.*~
+tmp/
+output/
+crash.log
+nanoc.yaml
+build.xml
+.idea/
+.DS_Store
+*.save
+nano.save*
+Gemfile.lock
