@@ -1,0 +1,495 @@
+/*
+
+Theme Name: FICIP 2014
+
+Theme URI: http://www.ficip.com.ar/
+
+Version: 4.0
+
+Description: DG por Esteban Benhabib // Front-end Andres Garcia
+
+Author: navega mi sitio
+
+Author URI: http://www.navegamisitio.com/
+
+Copyright: (c) 2014 ficip.com
+
+License: GNU/GPL Version 2 or later. http://www.gnu.org/licenses/gpl.html
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+
+html {
+  margin-top: 0;
+}
+
+body {
+  background-color: #343838;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1em;
+  max-width: (1280rem/16);
+  margin: 0 auto;
+}
+
+
+p {
+  color: #ffffff;
+  font-family: 'AlegreyasDel', sans-serif;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  line-height: 1.25;
+}
+
+strong {
+  font-size: 1.35em;
+}
+
+h2 {
+  font-size: 1.5625em;
+  font-family: 'AlegreyasDel', sans-serif;
+  color: #008C9E;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ul {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+
+figure > img {
+  width: 100%;
+}
+
+figure figcaption {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: url('../images/bg_destacadas.png');
+}
+
+li {
+  list-style-type: none;
+}
+
+input, select, textarea {
+  color: rgb(52, 56, 56);
+}
+
+/* header */
+
+header {
+  position: relative;
+  .ribbon {
+   float: right;
+    color: #FBB03B;
+    font-size: (25rem/16);
+    font-weight: bold;
+    margin: (50rem/16) (47rem/16);
+  }
+  a {
+    &.logo {
+      display: block;
+      position: absolute;
+      top: 29px;
+      left: 60px;
+    }
+  }
+  .encabezado {
+    background: url("../images/header-bg.png");
+    min-height: 220px;
+  }
+  .menu{
+    position: absolute;
+    width: (700rem/16);
+    bottom: (10rem/16);
+    display: table;
+    right: (10rem/16);
+
+    li{
+      margin-right: 1em;
+     float: left;
+      text-transform: uppercase;
+      a {
+        color: #ffffff;
+        font-size: (20rem/16);
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+header ul.redes li {
+  display: inline-block;
+}
+
+header ul.redes figure figcaption h1 {
+  font-size: 1em;
+  color: #ffffff;
+}
+
+header aside {
+  margin-top: 2em;
+  text-align: right;
+}
+
+/* destacadas */
+div.destacadas article:nth-child(1) {
+  padding: 0;
+}
+
+div.destacadas article:nth-child(2) {
+  padding: 0 0 0.45em 1.1em;
+}
+
+div.destacadas article:nth-child(3) {
+  padding: 0 0 0 1.1em;
+}
+
+div.destacadas h1 {
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin: 0;
+  padding: 0.5em;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: 'AlegreyasDel', sans-serif;
+  text-transform: uppercase;
+}
+
+div.destacadas p {
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin: 0;
+  padding: 0.5em;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: 'AlegreyasDel', sans-serif;
+}
+
+/* buscador  */
+ul.buscador {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1em;
+  background-color: #008C9E;
+  padding: 1.65em;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+ul.buscador li {
+  display: inline-block;
+  border-right: 1px solid #ffffff;
+  min-height: 72px;
+}
+
+ul.buscador li:nth-child(4) {
+  border-right: 0;
+}
+
+ul.buscador li:nth-child(4) img {
+  margin-bottom: 1.1em;
+}
+
+ul.buscador li:nth-child(3) img {
+  margin-bottom: 0.9em;
+}
+
+ul.buscador figcaption {
+  position: relative;
+  background-image: none;
+}
+
+div.buscador {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul.buscador h2 {
+  color: #ffffff;
+}
+
+/* Programacion  */
+ul.programacion {
+  background-color: #4D4D4D;
+  padding: 10px;
+}
+
+ul.programacion li:nth-child(2) {
+  width: 171px;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+ul.programacion li {
+  padding-top: 1.5em;
+  display: inline-block;
+  width: 86px;
+  margin: 5px;
+  height: 86px;
+  background-color: #666666;
+  text-align: center;
+}
+
+/* sidebar */
+aside.sidebar {
+  padding-right: 0;
+}
+
+/* banners */
+ul.banners li {
+  margin: 0.5em 0;
+}
+
+ul.banners li a img {
+  width: 100%;
+  opacity: 0.9;
+}
+
+ul.banners li a:hover img {
+  opacity: 1;
+}
+
+/* secciones home  */
+section > h1 {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 2em;
+  padding: 0.75em 0 0.75em 0.5em;
+}
+
+section.conferencias h1 {
+  padding: 0.85em;
+  font-family: 'AlegreyasDel', sans-serif;
+  background-color: #005F6B;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: block;
+}
+
+section.conferencias h2 {
+  font-family: 'AlegreyasDel', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+section.conferencias p {
+  font-family: 'AlegreyasDel', sans-serif;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+section.conferencias a.all_conf {
+  display: block;
+  color: #ffffff;
+  margin: 2em 0;
+  padding: 0.5em;
+  text-align: right;
+  background-color: #005F6B;
+  font-family: 'AlegreyasDel', sans-serif;
+}
+
+section.conferencias span {
+  font-family: 'AlegreyasDel', sans-serif;
+  background-color: #00B4CC;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 1em 0;
+  display: inline-block;
+  padding: 0.5em;
+}
+
+/* footer */
+
+footer {
+  font-family: 'AlegreyasDel', sans-serif;
+  padding: 1em 2em;
+  background-color: #555555;
+}
+
+/* Old browsers */
+footer a, footer h2 {
+  color: #ffffff;
+}
+
+footer div.pie {
+  text-align: center;
+}
+
+/* sponsors */
+aside.sponsors {
+  text-align: center;
+  background-color: #000000;
+}
+
+aside.sponsors li:nth-child(1) {
+  width: 30%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+aside.sponsors li {
+  display: inline-block;
+  padding: 0.5em;
+  width: 15%;
+  vertical-align: middle;
+}
+
+aside.sponsors li > a {
+  display: block;
+}
+
+/* form */
+form {
+  background-color: rgb(85, 85, 85);
+  padding: 2em 1em 1em 1em;
+  border-bottom: 1px solid rgb(0, 95, 107);
+}
+
+form label {
+  font-family: 'AlegreyasDel', sans-serif;
+  color: #ffffff;
+  font-size: 0.85em;
+}
+
+form p:nth-child(12) span {
+  width: 50% !important;
+  display: inline-block !important;
+}
+
+form input[type="file"] {
+  color: rgb(0, 140, 158);
+}
+
+/* single */
+section#single h1 {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 2em;
+  font-family: 'AlegreyasDel', sans-serif;
+  padding-bottom: 1em;
+  border-bottom: 3px dashed #00B4CC;
+}
+
+section#single div.sinopsis {
+  color: #ffffff;
+  font-size: 1em;
+  font-family: 'AlegreyasDel', sans-serif;
+  padding-bottom: 1em;
+  border-bottom: 3px dashed #00B4CC;
+  margin-bottom: 1em;
+}
+
+section#single div.sinopsis h2 {
+  color: #ffffff;
+  font-family: 'AlegreyasDel', sans-serif;
+}
+
+section#single div.director h2 {
+  font-size: 1em;
+  color: #ffffff;
+  font-family: 'AlegreyasDel', sans-serif;
+}
+
+section#single div.director span {
+  font-size: 2em;
+  color: #ffffff;
+  font-family: 'AlegreyasDel', sans-serif;
+}
+
+section#single div.director {
+  font-size: 1em;
+  color: #ffffff;
+  font-family: 'AlegreyasDel', sans-serif;
+}
+
+section#single div.director img {
+  margin-bottom: 2em;
+}
+
+section#single a {
+  text-decoration: underline;
+}
+
+section#single legend {
+  color: #ffffff;
+  font-size: 1em;
+  font-family: 'AlegreyasDel', sans-serif;
+  margin-bottom: 1em
+}
+
+section#single input[type="submit"] {
+  color: #00B4CC;
+}
+
+/*page */
+div.jscroll-loading {
+  color: #ffffff;
+}
+
+section#page h1 {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 2em;
+  font-family: 'AlegreyasDel', sans-serif;
+  padding-bottom: 1em;
+  border-bottom: 3px dashed #00B4CC
+}
+
+/* directores */
+section.directores article {
+  display: block;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  border-bottom: 3px dashed #00B4CC;
+}
+
+section.directores figure {
+  border: 2px solid #000000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  background-color: #000000;
+}
+
+@media screen and (max-width: 800px) {
+  aside {
+    display: none;
+  }
+
+  .small-9 {
+    width: 100%;
+  }
+
+  header div.small-6 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  article.small-4, article.small-8 {
+    width: 100%;
+  }
+
+  div.destacadas article:nth-child(2), div.destacadas article:nth-child(3) {
+    padding: 0;
+  }
+}
+

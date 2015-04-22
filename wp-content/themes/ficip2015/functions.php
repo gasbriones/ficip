@@ -27,4 +27,11 @@ function get_terms_dropdown( $taxonomy, $args = array() ){
     $output .="</select>";
     echo $output;
 }
+
+function thisYear(){
+    return '2015';
+}
+
+
+
 ?>

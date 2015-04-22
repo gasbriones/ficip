@@ -1,6 +1,29 @@
 <?php get_header(); ?>
 
-<div class="row">
+<div class="main">
+
+    <?php
+        $sec = new WP_Query();
+        $sec->query('cat=6&tag=2015');
+    ?>
+
+
+    <section class="carousel">
+        <ul class="slider">
+            <?php
+                while ($sec->have_posts()) : $sec->the_post();
+            ?>
+                <li>
+                    <a href="<?php the_permalink(); ?>"  title="<?php the_title(); ?>">
+                        <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>" title="<?php the_title(); ?>" />
+                    </a>
+                </li>
+            <?php endwhile; ?>
+        </ul>
+    </section>
+
+
+
 
 <?php get_sidebar(); ?>
 
@@ -39,7 +62,7 @@
 				<?php
 
 						$sec = new WP_Query();
-						$sec->query('showposts=2&offset=1&cat=6');
+						$sec->query('cat=6&tag=2015');
 
 						while ($sec->have_posts()) : $sec->the_post();
 
