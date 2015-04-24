@@ -27,6 +27,7 @@ get_header();
                     array(
                         'key' => 'nombre_del_director_de_la_pelicula'
                     )),
+                'tag' => thisYear(),
                 'orderby' => 'meta_value' // Sort by this meta ke
             );
 

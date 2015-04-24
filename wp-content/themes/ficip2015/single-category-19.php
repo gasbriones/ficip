@@ -102,12 +102,12 @@
                             PELÍCULAS POR DIRECTOR</a>
                 </li>
 
-                <li><a href="<?php bloginfo('url'); ?>/?cat=19" title="Buscar por película">
+                <li><a href="<?php bloginfo('url'); ?>/?cat=19<?php echo thisYear() ?>" title="Buscar por película">
                     PELÍCULAS POR TÍTULO
                         </a>
                 </li>
 
-                <li><a href="<?php bloginfo('url'); ?>/?s=seccion" title="Buscar por seccion">
+                <li><a href="<?php bloginfo('url'); ?>/?s=seccion<?php echo thisYear() ?>" title="Buscar por seccion">
                     PELÍCULAS POR SECCIÓN
                     </a>
                 </li>

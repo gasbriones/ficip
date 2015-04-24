@@ -29,7 +29,7 @@ function get_terms_dropdown( $taxonomy, $args = array() ){
 }
 
 function thisYear(){
-    return '2015';
+    return '&tag=2015';
 }
 function custom_excerpt_length( $length ) {
     return 20;

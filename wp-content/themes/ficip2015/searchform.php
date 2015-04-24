@@ -6,7 +6,7 @@
 
 
 	<li class="small-6 columns">
-		<?php wp_dropdown_categories('child_of=19&orderby=name&show_option_all=ELEGIR UNA SECCION'); ?>
+		<?php wp_dropdown_categories('child_of=19&orderby=name'.thisYear().'&show_option_all=ELEGIR UNA SECCION'); ?>
 	</li>
 	<li class="small-2 columns">
 

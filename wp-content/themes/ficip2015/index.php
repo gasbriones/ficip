@@ -22,7 +22,7 @@ get_header();
 
         <?php
         $sec = new WP_Query();
-        $sec->query('cat=6&tag=2015');
+        $sec->query('cat=6'.thisYear());
         ?>
 
         <section class="carousel">
@@ -44,24 +44,24 @@ get_header();
                 <ul class="search-menu">
 
                     <li>
-                        <a href="<?php bloginfo('url'); ?>/?cat=19&orderby=title" title="Buscar por película">
+                        <a href="<?php bloginfo('url'); ?>/?cat=19&orderby=title<?php echo thisYear() ?>" title="Buscar por película">
                             <img src="<?php bloginfo('template_url'); ?>/images/btn-titulos.png" alt=""/>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php bloginfo('url'); ?>/?cat=19" title="Buscar por seccion">
+                        <a href="<?php bloginfo('url'); ?>/?cat=19<?php echo thisYear() ?>" title="Buscar por seccion">
                             <img src="<?php bloginfo('template_url'); ?>/images/btn-seccion.png" alt=""/>
                         </a>
                     </li>
                     <li class="no-margin">
-                        <a href="<?php bloginfo('url'); ?>/?page_id=4931&orderby=meta_value"
+                        <a href="<?php bloginfo('url'); ?>/?page_id=4931<?php echo thisYear() ?>&orderby=meta_value"
                            title="Buscar por director">
                             <img src="<?php bloginfo('template_url'); ?>/images/btn-director.png" alt=""/>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php bloginfo('url'); ?>/?cat=5" title="Jurados del festival">
+                        <a href="<?php bloginfo('url'); ?>/?cat=5<?php echo thisYear() ?>" title="Jurados del festival">
                             <img src="<?php bloginfo('template_url'); ?>/images/btn-jurado.png" alt=""/>
                         </a>
                     </li>
@@ -85,7 +85,7 @@ get_header();
         <section class="main-footer">
             <?php
                 //$conferencias = new WP_Query();
-                query_posts('cat=15,6&order=DESC');
+                query_posts('cat=15,6'.thisYear().'&order=DESC');
                 while (have_posts()) : the_post();
             ?>
                 <article class="notice">

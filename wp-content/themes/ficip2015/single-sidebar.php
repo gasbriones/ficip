@@ -5,7 +5,7 @@
             <?php
                 $cantidadOpinion = 10;
                 $articulosOpinion = new WP_Query();
-                $articulosOpinion->query('showposts=' . $cantidadOpinion . '&cat=8');
+                $articulosOpinion->query('showposts=' . $cantidadOpinion . '&cat=8'.thisYear());
                 while ($articulosOpinion->have_posts()) :
                 $articulosOpinion->the_post();
             ?>
@@ -20,24 +20,24 @@
     <ul class="search-menu">
 
         <li>
-            <a href="<?php bloginfo('url'); ?>/?cat=19&orderby=title" title="Buscar por película">
+            <a href="<?php bloginfo('url'); ?>/?cat=19<?php echo thisYear() ?>&orderby=title" title="Buscar por película">
                 <img src="<?php bloginfo('template_url'); ?>/images/btn-titulos-small.png" alt=""/>
             </a>
         </li>
 
         <li>
-            <a href="<?php bloginfo('url'); ?>/?cat=19" title="Buscar por seccion">
+            <a href="<?php bloginfo('url'); ?>/?cat=19<?php echo thisYear() ?>" title="Buscar por seccion">
                 <img src="<?php bloginfo('template_url'); ?>/images/btn-seccion-small.png" alt=""/>
             </a>
         </li>
         <li class="no-margin">
-            <a href="<?php bloginfo('url'); ?>/?page_id=4931&orderby=meta_value"
+            <a href="<?php bloginfo('url'); ?>/?page_id=4931<?php echo thisYear() ?>&orderby=meta_value"
                title="Buscar por director">
                 <img src="<?php bloginfo('template_url'); ?>/images/btn-director-small.png" alt=""/>
             </a>
         </li>
         <li>
-            <a href="<?php bloginfo('url'); ?>/?cat=5" title="Jurados del festival">
+            <a href="<?php bloginfo('url'); ?>/?cat=5<?php echo thisYear() ?>" title="Jurados del festival">
                 <img src="<?php bloginfo('template_url'); ?>/images/btn-jurado-small.png" alt=""/>
             </a>
         </li>

@@ -11,12 +11,15 @@ $(document).ready(function () {
     $('.slider').bxSlider({
         captions: true,
         controls:false,
-        auto:true
+        auto:true,
+        speed:1500,
+        pause:10000
+
     });
 
-        if($('.single-body').height() > 1048){
-            $('.sidebar').css('height',($('.single-body').height()+32) + 'px');
-        }
+    if($('.single-body').height() > 1048){
+        $('.sidebar').css('height',($('.single-body').height()+32) + 'px');
+    }
 
 });
 
