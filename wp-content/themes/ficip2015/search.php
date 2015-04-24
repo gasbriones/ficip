@@ -27,17 +27,8 @@
             ?>
             <div class="nav-previous alignleft"><?php next_posts_link('Ver mas'); ?></div>
             <div class="nav-next alignright"><?php previous_posts_link('Anteriores'); ?></div>
-
-
         </section>
-
-
-
-
-
         <?php get_template_part('single-sidebar');  ?>
-
-
     </div>
 
 <?php get_footer(); ?>
