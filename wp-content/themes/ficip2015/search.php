@@ -11,7 +11,7 @@
             // The Loop
             if (have_posts()) :
                 while (have_posts()) : the_post();  ?>
-                    <article style="margin-bottom:2em;" class="row ">
+                    <article style="margin-bottom:2em;" class="row film-list">
                         <figure class="small-4 columns left">
                             <img src="<?php the_field('afiche_de_la_pelicula'); ?>" alt=""/>
                         </figure>
