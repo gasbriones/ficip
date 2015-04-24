@@ -13,12 +13,14 @@
             if (have_posts()) :
                 while (have_posts()) : the_post();  ?>
                     <article style="margin-bottom:2em;" class="row film-list">
+
                         <figure class="small-4 columns left ">
                             <img src="<?php the_field('afiche_de_la_pelicula'); ?>" alt=""/>
                         </figure>
                         <div class="small-8 columns">
                             <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>">
-                                <h2><?php the_title(); ?></h2></a>
+                            <h2 class="title"><?php the_title(); ?></h2></a>
+                            <h5 class="director"> de <?php the_field('nombre_del_director_de_la_pelicula'); ?></h5>
 
                             <p><?php the_field('sinopsis_de_la_pelicula'); ?></p>
                         </div>

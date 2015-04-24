@@ -45,8 +45,6 @@ get_header();
                             <p><?php the_field('biografia_del_director_de_la_pelicula'); ?></p>
                         </div>
                     </article>
-
-
                 <?php
                 endwhile; endif;
             ?>
