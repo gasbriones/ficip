@@ -25,7 +25,8 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', 'localhost:3306');
+
+define('DB_HOST', 'localhost');
 
 /** Codificación de caracteres para la base de datos. */
 define('DB_CHARSET', 'utf8');
@@ -70,6 +71,9 @@ $table_prefix  = 'wp_';
  * para traducir WordPress al catalán.
  */
 define('WPLANG', 'es_ES');
+
+define('WP_SITEURL', 'http://localhost/gastudio/ficip');
+define('WP_HOME', 'http://localhost/gastudio/ficip');
 
 /**
  * Para desarrolladores: modo debug de WordPress.
