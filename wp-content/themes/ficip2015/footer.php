@@ -47,14 +47,21 @@
 	</div>
 </aside>
 
-<footer  class="row">
-
-
-				<div class="small-12 columns pie">
-				<img src="<?php bloginfo('template_url'); ?>/images/pie.png" />
-				</div>
-
-
+<footer class="footer clearfix">
+    <div class="frame left">
+        <img src="<?php bloginfo('template_url'); ?>/images/frame.jpg">
+    </div>
+    <div class="logo-footer left">
+        <img src="<?php bloginfo('template_url'); ?>/images/ficip-logo-footer.png">
+    </div>
+    <ul class="social right">
+        <li>
+            <a target="_blank" class="fb" title="Facebook FICiP" href="https://www.facebook.com/ficip?fref=ts"></a>
+        </li>
+        <li>
+            <a target="_blank" class="tw" title="Twitter FICiP" href="https://twitter.com/argentinaFICiP"></a>
+        </li>
+    </ul>
 </footer>
 
 

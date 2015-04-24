@@ -31,7 +31,10 @@ function get_terms_dropdown( $taxonomy, $args = array() ){
 function thisYear(){
     return '2015';
 }
-
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 ?>

@@ -29,11 +29,6 @@ if (have_posts()) :
 
 
 </section>
-
-
-
-
-
 <?php get_sidebar(); ?>
 
 
