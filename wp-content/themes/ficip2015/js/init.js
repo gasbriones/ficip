@@ -13,7 +13,8 @@ $(document).ready(function () {
         controls:false,
         auto:true,
         speed:1500,
-        pause:10000
+        pause:10000,
+        infiniteLoop:true
 
     });
 
