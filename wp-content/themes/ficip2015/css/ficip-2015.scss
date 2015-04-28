@@ -1,7 +1,6 @@
 @import "mixin";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
 
-
 html {
   margin-top: 0;
   background-color: #222;
@@ -14,10 +13,10 @@ body {
   margin: 0 auto;
 }
 
-
 .left {
   float: left !important;
 }
+
 .right {
   float: right !important;
 }
@@ -26,18 +25,13 @@ strong {
   font-size: 1.35em;
 }
 
-
-
 ul {
   margin: 0;
 }
 
-
 li {
   list-style-type: none;
 }
-
-
 
 .bx-wrapper .bx-viewport {
   background: none;
@@ -48,43 +42,39 @@ li {
 
 }
 
-.bx-wrapper{
+.bx-wrapper {
   margin: 0 !important;
-  .bx-caption{
-    @include gradient_v(transparent,#000000);
+  .bx-caption {
+    @include gradient_v(transparent, #000000);
     height: (140rem/16);
 
-    span{
+    span {
       font-size: (32rem/16);
       font-weight: bold;
       line-height: (100rem/16);
-      text-shadow:2px 2px 2px black;
+      text-shadow: 2px 2px 2px black;
     }
   }
-  .bx-default-pager{
+  .bx-default-pager {
     bottom: (20rem/16);
-    a{
+    a {
       width: 15px !important;
       height: 15px !important;
       @include border_radius(10px !important);
       background: #ffffff !important;
-      &.active{
+      &.active {
         background: #8A8A8B !important;
       }
     }
   }
 }
 
-
-
-
-
 /* header */
 
 header {
   position: relative;
   .ribbon {
-   float: right;
+    float: right;
     color: #FBB03B;
     font-size: (25rem/16);
     font-weight: bold;
@@ -102,57 +92,98 @@ header {
     background: url("../images/header-bg.png");
     min-height: 220px;
   }
-  .menu{
+  .menu {
     position: absolute;
     width: (700rem/16);
     bottom: (10rem/16);
     display: table;
     right: (10rem/16);
 
-    li{
-      margin-right: 1em;
-     float: left;
+    > li {
+      padding: 0.1em 0.5em;
+      float: left;
       text-transform: uppercase;
+      position: relative;
+
+
       a {
         color: #ffffff;
         font-size: (20rem/16);
-        &:hover{
-          text-decoration: underline;
+      }
+      .sub-menu {
+        display: none;
+        margin: 0;
+        position: absolute;
+        top: 32px;
+        width: 229%;
+        z-index: 9999;
+        left: 0;
+        padding: .5em;
+        @include box_shadow(5px 5px 5px #000000);
+        > li {
+          float: none !important;
+          padding: 0.1em .5em ;
+          @include box_sizing(border-box);
+          text-transform: none;
+          border-bottom: solid 1px #CF574E;
+          &:hover{
+            background: #95261D;
+          }
+          &:last-child{
+            border-bottom: none;
+          }
+        }
+      }
+      &:hover{
+        background: #C73327;
+       > a {
+          font-weight: bold;
+        }
+        .sub-menu {
+          display: block;
+          background: #C73327;
+
+        }
+      }
+      &.current-menu-item{
+        background: #C73327;
+        a{
+          font-weight: bold;
         }
       }
     }
   }
 }
 
-.main{
+.main {
   background: #ffffff;
 }
 
-.home{
-  .slider{
-    img{
+.home {
+  .slider {
+    img {
       width: 100%;
     }
   }
 }
 
-.main-body{
+.main-body {
   width: 92%;
   margin: 1.5em auto;
-  .menu-container{
+  .menu-container {
     width: 76%;
     float: left;
 
-    .search-menu{
-      li{
+    .search-menu {
+      li {
         float: left;
         margin-right: 1em;
         margin-bottom: 1em;
-        &.no-margin{
+        &.no-margin {
           margin-right: 0;
         }
-        a{
-          &:hover{
+        a {
+          &:hover {
             @include opacity(.7);
           }
         }
@@ -160,10 +191,11 @@ header {
     }
   }
 }
-.main-footer{
+
+.main-footer {
   width: 92%;
   margin: 1.5em auto;
-  .notice{
+  .notice {
     float: left;
     width: 25%;
     padding: 1em;
@@ -171,10 +203,10 @@ header {
     overflow: hidden;
     margin-bottom: 1em;
 
-    .post-categories{
+    .post-categories {
       margin-bottom: .5em;
       display: table;
-      li{
+      li {
         border: solid 1px #FBB03B;
         @include border_radius(5px);
         padding: 0 5px;
@@ -182,32 +214,30 @@ header {
         margin-right: .5em;
 
       }
-      a{
+      a {
         color: #FBB03B;
         font-size: (16rem/16);
         font-weight: bold;
 
       }
     }
-    .title{
-      h4{
+    .title {
+      h4 {
         color: #C73327;
         font-weight: bold;
       }
-      &:hover{
+      &:hover {
         text-decoration: underline;
         color: #C73327;
       }
     }
 
-
-
-    p{
+    p {
       color: #000000;
       font-size: (16rem/16);
 
       position: relative;
-      &:before{
+      &:before {
         left: 0;
         content: "";
         bottom: 0;
@@ -224,44 +254,44 @@ header {
 .sidebar {
   float: right;
   position: relative;
-  .programing{
-    li{
+  .programing {
+    li {
       background: #5C0F09;
       height: (48rem/16);
       line-height: (48rem/16);
       text-align: center;
       border-bottom: solid 1px #D25C52;
-      &:first-child{
+      &:first-child {
         line-height: inherit;
-        border-bottom:none;
+        border-bottom: none;
       }
-      &:last-child{
-        border-bottom:none;
+      &:last-child {
+        border-bottom: none;
       }
-      a{
+      a {
         font-size: (20rem/16);
         color: #ffffff;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
     }
   }
-  &.small{
+  &.small {
     background: #FBB03B;
     padding: 2em 1.5em;
   }
 
 }
 
-.reglamento{
+.reglamento {
   color: #000000;
   float: right;
   text-transform: uppercase;
   font-size: (18rem/16);
   margin-right: (40rem/16);
   position: relative;
-  &:before{
+  &:before {
     width: 29px;
     height: 36px;
     content: "";
@@ -270,20 +300,20 @@ header {
     top: -3px;
     background: url("../images/reglamento.png");
   }
-  &:hover{
+  &:hover {
     color: #000000;
     text-decoration: underline;
   }
 }
 
-.single-body{
+.single-body {
   width: 74%;
   float: left;
   background: #ffffff;
   @include box_sizing(border-box);
   padding: 1em 3em;
 
-  h1{
+  h1 {
     font-size: (48rem/16);
     color: #C73327;
     font-weight: bold;
@@ -294,23 +324,23 @@ header {
     color: #C73327;
     font-weight: bold;
   }
-  .film-list{
+  .film-list {
     background: #E6E6E6;
     margin: 0;
-    .small-4{
+    .small-4 {
       padding: 0;
-      margin:0;
+      margin: 0;
       width: 25%;
     }
-    .small-8{
+    .small-8 {
       width: 70%;
       margin: 0;
       padding: 1.5em;
       @include box_sizing(border-box);
-      .title{
+      .title {
         color: #5C0F09;
       }
-      .director{
+      .director {
         color: #C73327;
         font-weight: bold;
       }
@@ -319,9 +349,9 @@ header {
 
   .nav-previous,
   .nav-next,
-  .buscador{
-    a{
-      color:#F15A24;
+  .buscador {
+    a {
+      color: #F15A24;
       font-weight: bold;
       font-size: 1.5em;
       text-decoration: underline;
@@ -329,57 +359,57 @@ header {
   }
 }
 
-.the-film{
-  .film-head{
+.the-film {
+  .film-head {
     background: #E6E6E6;
   }
-  .film-poster{
+  .film-poster {
     float: left;
     width: 30%;
     margin: 0;
   }
-  .film-items{
+  .film-items {
     float: left;
     width: 70%;
     @include box_sizing(border-box);
     padding: 1em 2em;
   }
-  .film-body{
+  .film-body {
     margin-top: 1em;
-    .sinopsis,.director{
+    .sinopsis, .director {
       line-height: normal;
       margin-top: 2em;
     }
   }
-  .director{
+  .director {
 
     margin: 0;
     margin-bottom: 1em;
-    figure{
+    figure {
       width: 30%;
     }
   }
 }
 
-.buscador{
+.buscador {
   margin-top: 2em;
 }
 
-#searchform{
+#searchform {
   background: none repeat scroll 0 0 #e6e6e6;
   padding: 1em 1em 0;
 }
 
-form{
-  label{
+form {
+  label {
     font-weight: bold;
     color: #000000;
     font-size: 1em;
   }
-  input[type='submit']{
+  input[type='submit'] {
     text-transform: uppercase;
     color: #ffffff;
-    background:#C73327 ;
+    background: #C73327;
     @include border_radius(5px);
     padding: .5em 3.7em;
     font-weight: bold;
@@ -387,45 +417,43 @@ form{
   }
 }
 
-
 /* footer */
 
 footer {
   padding: 2em 2em;
   background-color: #555555;
 
-  .frame{
+  .frame {
     margin-right: 2em;
   }
-  .logo-footer{
+  .logo-footer {
     margin-top: 1.6em;
   }
 
-  .social{
+  .social {
     margin-top: 4em;
-    li{
+    li {
       float: left;
       margin-left: 1em;
     }
-    a{
+    a {
       width: 41px;
       height: 41px;
       background: url("../images/social.png");
       display: block;
-      &:hover{
+      &:hover {
         @include opacity(.7);
       }
-      &.fb{
+      &.fb {
         background-position: 0 0;
       }
-      &.tw{
+      &.tw {
         background-position: -54px 0;
       }
     }
   }
 
 }
-
 
 footer div.pie {
   text-align: center;
