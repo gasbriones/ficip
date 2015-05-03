@@ -92,15 +92,49 @@ header {
     bottom: 0.625rem;
     display: table;
     right: 0.625rem; }
-    header .menu li {
-      margin-right: 1em;
+    header .menu > li {
+      padding: 0.1em 0.5em;
       float: left;
-      text-transform: uppercase; }
-      header .menu li a {
+      text-transform: uppercase;
+      position: relative; }
+      header .menu > li a {
         color: #ffffff;
         font-size: 1.25rem; }
-        header .menu li a:hover {
-          text-decoration: underline; }
+      header .menu > li .sub-menu {
+        display: none;
+        margin: 0;
+        position: absolute;
+        top: 32px;
+        width: 229%;
+        z-index: 9999;
+        left: 0;
+        padding: .5em;
+        -webkit-box-shadow: 5px 5px 5px black;
+        -moz-box-shadow: 5px 5px 5px black;
+        box-shadow: 5px 5px 5px black; }
+        header .menu > li .sub-menu > li {
+          float: none !important;
+          padding: 0.1em 0.5em;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          text-transform: none;
+          border-bottom: solid 1px #CF574E; }
+          header .menu > li .sub-menu > li:hover {
+            background: #95261D; }
+          header .menu > li .sub-menu > li:last-child {
+            border-bottom: none; }
+      header .menu > li:hover {
+        background: #C73327; }
+        header .menu > li:hover > a {
+          font-weight: bold; }
+        header .menu > li:hover .sub-menu {
+          display: block;
+          background: #C73327; }
+      header .menu > li.current-menu-item {
+        background: #C73327; }
+        header .menu > li.current-menu-item a {
+          font-weight: bold; }
 
 .main {
   background: #ffffff; }
@@ -297,7 +331,7 @@ form label {
 form input[type='submit'] {
   text-transform: uppercase;
   color: #ffffff;
-  background: #c73327;
+  background: #C73327;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
