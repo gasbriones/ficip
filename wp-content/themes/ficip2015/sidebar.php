@@ -5,7 +5,7 @@
             <?php
                 $cantidadOpinion = 10;
                 $articulosOpinion = new WP_Query();
-                $articulosOpinion->query('showposts=' . $cantidadOpinion . '&cat=8'.thisYear());
+                $articulosOpinion->query('showposts=' . $cantidadOpinion . '&cat=8'.thisYear().'&order=ASC');
                 while ($articulosOpinion->have_posts()) :
                 $articulosOpinion->the_post();
             ?>

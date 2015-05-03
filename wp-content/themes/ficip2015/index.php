@@ -22,7 +22,7 @@ get_header();
 
         <?php
         $sec = new WP_Query();
-        $sec->query('cat=44'.thisYear());
+        $sec->query('showposts=16&cat=44'.thisYear());
         ?>
 
         <section class="carousel">

@@ -15,7 +15,7 @@ register_sidebar(array(
 if (function_exists('add_theme_support')) {
    add_theme_support('post-thumbnails');//Agrega soporte
    add_image_size('destacada-thumbnail', 660, 396, true); // destacada list thumbnails.
-   add_image_size('noticias-thumbnail', 312, 195, true); // noticias secundarias list thumbnails.
+   //add_image_size('noticias-thumbnail', 312, 195, true); // noticias secundarias list thumbnails.
    add_image_size('page-thumbnail', 990, 442, true); // page y noticia adentro thumbnail
 }
 function get_terms_dropdown( $taxonomy, $args = array() ){

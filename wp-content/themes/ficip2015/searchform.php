@@ -2,11 +2,12 @@
 <ul class="row">
 	<li class="small-4 columns">
 		<input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
+        <input type="hidden" value="2015" name="tag" id="tag" />
 	</li>
 
 
 	<li class="small-6 columns">
-		<?php wp_dropdown_categories('child_of=19&orderby=name'.thisYear().'&show_option_all=ELEGIR UNA SECCION'); ?>
+		<?php wp_dropdown_categories('child_of=19&orderby=name&show_option_all=ELEGIR UNA SECCION'.thisYear()); ?>
 	</li>
 	<li class="small-2 columns">
 

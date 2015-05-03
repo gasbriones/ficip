@@ -1,12 +1,8 @@
 <?php get_header(); ?>
 
     <div class="main clearfix">
-
-
         <section class="single-body clearfix">
-
             <?php
-
             // The Loop
             if (have_posts()) :
                 while (have_posts()) : the_post();  ?>
@@ -85,7 +81,7 @@
                                 <?php $video = get_field('embed_video');
                                 if ($video != "") {
                                     echo "<h2>TRAILER</h2>";
-                                    echo '<iframe width="100%" height="315" src="//www.youtube.com/embed/' . $video . '" frameborder="0" allowfullscreen></iframe>';
+                                    echo '<iframe width="100%" height="315" src="'. $video . '" frameborder="0" allowfullscreen></iframe>';
                                 } ?>
                             </div>
                         </div>
